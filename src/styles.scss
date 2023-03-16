@@ -1,0 +1,98 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$UABC-primary: mat.define-palette(mat.$indigo-palette);
+$UABC-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$UABC-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$UABC-theme: mat.define-light-theme((
+  color: (
+    primary: $UABC-primary,
+    accent: $UABC-accent,
+    warn: $UABC-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($UABC-theme);
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+  }
+  
+  
+  html, body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../src/app/image/imageeen.png");
+    color: #3e4144;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .btn-uabc{
+    width: 42%;
+    letter-spacing: .1em;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #00723F;
+    --bs-btn-border-color: #00723F;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #50B848;
+    --bs-btn-hover-border-color: #50B848;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #00723F;
+    --bs-btn-active-border-color: #00723F;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #00723F;
+    --bs-btn-disabled-border-color: #00723F;
+}
+  
+  
+  dd {
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: black;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px 10px;
+  }
+  
+  button:hover {
+    background-color: #3e4144;
+  }
+  
+  button:focus{ 
+    outline: none;
+  }
+  
+  .p-1 {
+    padding: 1px;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
