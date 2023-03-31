@@ -5,8 +5,9 @@ import { AppComponent } from './app.component';
 import { HomeViewComponent } from './home/home-view/home-view.component';
 
 const routes: Routes = [
-  { path: 'login', component: MainPageComponent, data: {Name: 'Login'}, title: 'Login'},
-  { path: 'home', component: HomeViewComponent, data: {Name: 'Home'}, title: 'Home'},
+  { path: 'login', component: MainPageComponent},
+  { path: 'home', component: HomeViewComponent},
+  { path: '', component: MainPageComponent},
 
 ];
 

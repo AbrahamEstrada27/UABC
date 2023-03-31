@@ -72,6 +72,23 @@ $UABC-theme: mat.define-light-theme((
     --bs-btn-disabled-bg: #00723F;
     --bs-btn-disabled-border-color: #00723F;
 }
+
+.bg-dark {
+  background-color: #DD971A !important;
+}
+
+.navbar-toggler {
+  background-color: #DD971A !important;
+}
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: #FEBE10 !important;
+}
+
+.text-bg-dark {
+  color: #fff!important;
+  background-color: #FEBE10 !important;
+}
   
   
   dd {
